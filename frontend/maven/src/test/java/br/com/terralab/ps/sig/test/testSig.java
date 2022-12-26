@@ -1,12 +1,13 @@
 package br.com.terralab.ps.sig.test;
 
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 
 public class testSig {
 	
@@ -32,6 +33,8 @@ public class testSig {
 	@Test
 	public void deveria_AcharPontoNoMapa_SemBuscaAutomatica() {
         this.browser.findElement(By.id("input-field-search")).sendKeys("ipatinga");
+        WebElement botaoPesquisar = this.browser.findElement(By.id("button-search-input-field-search"));
+        new Actions(this.browser).click(botaoPesquisar).perform();
 	}
 
 }
