@@ -13,14 +13,15 @@ public class testSig {
 		this.paginaDeInicio = new InicialPage();
 	}
 	
-	@AfterEach
+	/*@AfterEach
 	public void afterAll() {
 		paginaDeInicio.fechar();
-	}
+	}*/
 	
 	@Test
-	public void deveria_AcharPontoNoMapa_SemBuscaAutomatica() {
-		paginaDeInicio.preencheBuscaDeCidade("Ipatinga");
+	public void deveria_AcharPontoNoMapa_SemBuscaAutomatica() throws InterruptedException {
+		paginaDeInicio.preencheBuscaDeCidade("belo horizonte");
+		Thread.sleep(1500);
 		paginaDeInicio.clicaBotaoPesquisar();
 	}
 
