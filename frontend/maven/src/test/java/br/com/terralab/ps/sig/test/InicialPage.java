@@ -30,4 +30,8 @@ public class InicialPage {
 		WebElement botaoPesquisar = this.browser.findElement(By.id("button-search-input-field-search"));
         new Actions(this.browser).click(botaoPesquisar).perform();		
 	}
+
+	public boolean procuraPonto() {
+		return browser.getPageSource().contains("pin-input-field-search");
+	}
 }
