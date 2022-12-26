@@ -22,7 +22,7 @@ public class testSig {
 	
 	@Test
 	public void deveria_AcharPontoNoMapa_SemBuscaAutomatica() throws InterruptedException {
-		paginaDeInicio.preencheBuscaDeCidade("belo horizonte");
+		paginaDeInicio.preencheBuscaDeCidade("Belo Horizonte");
 		Thread.sleep(1500);
 		paginaDeInicio.clicaBotaoPesquisar();
 		Thread.sleep(2500);

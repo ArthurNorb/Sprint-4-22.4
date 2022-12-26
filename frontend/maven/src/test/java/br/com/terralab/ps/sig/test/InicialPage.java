@@ -32,6 +32,7 @@ public class InicialPage {
 	}
 
 	public boolean procuraPonto() {
-		return browser.getPageSource().contains("pin-input-field-search");
+		return this.browser.getPageSource().contains("pin-input-field-search");
 	}
+
 }
